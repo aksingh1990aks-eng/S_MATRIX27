@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-MATRICS 2027 | Symposium on Millimeter-wave AnTenna and RF Integrated Circuits and Systems</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #ff9900;
+            --light-bg: #f4f7f6;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section - Glassmorphism */
+        .hero {
+            /* Using a cool dark tech/abstract background to make the glass pop */
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed;
+            padding: 120px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .hero-glass {
+            background: rgba(255, 255, 255, 0.05); /* Very subtle white tint */
+            backdrop-filter: blur(16px); /* The frosted glass effect */
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for the glass edge */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Depth shadow */
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 900px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-glass h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-glass h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+            line-height: 1.4;
+        }
+
+        .hero-glass p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: #f8f8f8;
+            opacity: 0.9;
+        }
+
+        .hero-glass .date-location {
+            /* Pill-shaped secondary glass element */
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-top: 35px;
+            display: inline-block;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Sections General */
+        section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-center {
+            text-align: center;
+        }
+
+        /* About */
+        .about-bg {
+            background-color: var(--light-bg);
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .theme {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px dashed var(--secondary-color);
+            border-radius: 8px;
+        }
+
+        /* Important Dates Table */
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: var(--white);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Tracks */
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .track-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .track-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .track-card ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .track-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Committee */
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .committee-group {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .committee-group h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .committee-group ul {
+            list-style: none;
+        }
+
+        .committee-group li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        footer h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero-glass {
+                padding: 40px 20px;
+            }
+            .hero-glass h1 {
+                font-size: 2.8rem;
+            }
+            .hero-glass h2 {
+                font-size: 1.2rem;
+            }
+            .hero-glass .date-location {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">S-MATRICS 2027</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#dates">Important Dates</a></li>
+                <li><a href="#tracks">Tracks</a></li>
+                <li><a href="#committee">Committee</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glass">
+            <h1>S-MATRICS-2027</h1>
+            <h2>Symposium on Millimeter-wave AnTenna and RF Integrated Circuits and Systems</h2>
+            <p>Organized by: Anusandhan National Research Foundation, New Delhi & IEEE MTT-S SBC, Dept of ECE, GGV</p>
+            <p>Host Institution: Guru Ghasidas Vishwavidyalaya, Bilaspur, CG</p>
+            <div class="date-location">January 22-23, 2027 | Bilaspur, India</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="about-bg">
+        <section id="about" class="about">
+            <div class="section-center">
+                <h2>About the Symposium</h2>
+            </div>
+            
+            <div class="theme">
+                Primary Theme: "From Millimeter-Wave Research to Real-World Innovation"<br>
+                <span style="font-size: 1rem; color: #555; font-weight: normal;">Bridging Research, Indigenous Technology Development and Industrial Realization</span>
+            </div>
+
+            <p>S-MATRICS-2027 focuses on transforming advances in millimeter-wave technology into practical, reliable, and indigenous solutions for emerging applications. The symposium brings together researchers, academicians, industry professionals, startups, students, and scientists from national R&D organizations to exchange ideas in millimeter-wave antennas, RF circuits, RFIC/MMIC, advanced packaging, and integrated systems.</p>
+            
+            <p>Emphasis will be placed on bridging fundamental research with technology development, prototyping, characterization, manufacturing, and industrial deployment. The symposium aims to encourage interdisciplinary collaboration and identify new opportunities in 5G/6G, satellite communication, radar, electronic warfare, aerospace, automotive sensing, and space electronics, contributing to a stronger indigenous high-frequency technology ecosystem.</p>
+        </section>
+    </div>
+
+    <!-- Important Dates Section -->
+    <section id="dates">
+        <div class="section-center">
+            <h2>Important Dates</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Start of Paper Submission</td>
+                    <td>November 02, 2026</td>
+                </tr>
+                <tr>
+                    <td>Paper Submission Deadline</td>
+                    <td>December 04, 2026</td>
+                </tr>
+                <tr>
+                    <td>Notification of Acceptance</td>
+                    <td>December 20, 2027</td>
+                </tr>
+                <tr>
+                    <td>Camera Ready Paper</td>
+                    <td>January 01, 2027</td>
+                </tr>
+                <tr>
+                    <td><strong>Symposium Date</strong></td>
+                    <td><strong>January 22-23, 2027</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Tracks Section -->
+    <div class="about-bg">
+        <section id="tracks">
+            <div class="section-center">
+                <h2>Call for Papers: Symposium Tracks</h2>
+            </div>
+            <div class="tracks-grid">
+                
+                <!-- Track 1 -->
+                <div class="track-card">
+                    <h3>Track 1: mmWave Antennas and Antenna Systems</h3>
+                    <ul>
+                        <li>Millimeter-Wave Antennas</li>
+                        <li>Phased Array and Beamforming Antennas</li>
+                        <li>MIMO and Massive MIMO Antennas</li>
+                        <li>Metasurface and Metamaterial Antennas</li>
+                        <li>Reconfigurable and Tunable Antennas</li>
+                        <li>Dielectric Resonator Antennas</li>
+                        <li>SIW and Substrate-Based Antennas</li>
+                        <li>Antenna-in-Package (AIP)</li>
+                        <li>Conformal and Flexible Antennas</li>
+                        <li>Wideband and Ultra-Wideband Antennas</li>
+                        <li>High-Gain and Low-Profile Antennas</li>
+                        <li>Antennas for 5G/6G and THz Systems</li>
+                        <li>Spaceborne and Satellite Antennas</li>
+                        <li>Radar, Automotive and Sensing Antennas</li>
+                    </ul>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="track-card">
+                    <h3>Track 2: mmWave Circuits and Components</h3>
+                    <ul>
+                        <li>Millimeter-Wave RF Circuits</li>
+                        <li>RF Passive Components (Power Dividers, Couplers, Filters, Baluns)</li>
+                        <li>Beamforming Networks (Butler and Nolen Matrices)</li>
+                        <li>Low-Noise Amplifiers (LNA) & Power Amplifiers (PA)</li>
+                        <li>Mixers and Frequency Converters</li>
+                        <li>Oscillators and Frequency Synthesizers</li>
+                        <li>Phase Shifters and Attenuators</li>
+                        <li>SIW and Substrate-Based Circuits</li>
+                        <li>RF Front-End Modules and Subsystems</li>
+                    </ul>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="track-card">
+                    <h3>Track 3: Microwave Integrated Circuits</h3>
+                    <ul>
+                        <li>RFIC and MMIC Design (CMOS/BiCMOS, GaN/GaAs/SiGe)</li>
+                        <li>Monolithic Microwave Circuits</li>
+                        <li>System-on-Chip (SoC) and System-in-Package (SiP)</li>
+                        <li>Antenna-in-Package (AiP) and Chip-to-Antenna Integration</li>
+                        <li>5G/6G Transceivers and Integrated Beamforming ICs</li>
+                        <li>Phased-Array RFICs</li>
+                        <li>Automotive Radar ICs</li>
+                        <li>Satellite and Space RFIC/MMIC</li>
+                        <li>Electronic Warfare and Defense Electronics</li>
+                        <li>AI/ML-Assisted RFIC/MMIC Design</li>
+                        <li>Advanced Semiconductor Packaging and Heterogeneous Integration</li>
+                        <li>mmWave/THz Integrated Systems</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Committee Section -->
+    <section id="committee">
+        <div class="section-center">
+            <h2>Committee Members</h2>
+        </div>
+        <div class="committee-grid">
+            <div class="committee-group">
+                <h3>Patrons</h3>
+                <ul>
+                    <li><strong>Chief Patron:</strong> Prof. Alok Kumar Chakrawal (Hon'ble Vice Chancellor, GGV Bilaspur)</li>
+                    <li><strong>Patron:</strong> Prof. Ashwini Kumar Dixit (Registrar, GGV Bilaspur)</li>
+                </ul>
+            </div>
+            
+            <div class="committee-group">
+                <h3>Chairs & Convenors</h3>
+                <ul>
+                    <li><strong>Convenors:</strong> Prof. M. Chakradhar Rao, Dr. Sudakar Singh Chauhan</li>
+                    <li><strong>General Chairs:</strong> Dr. Shrawan Kumar Patel, Dr. Anil Kumar Soni</li>
+                    <li><strong>TPC Chairs:</strong> Dr. Arani Ali Khan, Dr. Rusan Kumar Barik, Dr. G. Arun Kumar</li>
+                </ul>
+            </div>
+
+            <div class="committee-group">
+                <h3>Organizing Committee (GGV Bilaspur)</h3>
+                <ul>
+                    <li>Prof. Soma Das, Prof. Anita Khanna, Prof. Nipun K Mishra</li>
+                    <li>Dr. P. S. Srivastava, Dr. Rajiv Dey, Dr. Dharmendra Kumar</li>
+                    <li>Dr. Manoj Gupta, Dr. Sumit Kumar Gupta, Dr. Bhanu P. S. Dohare</li>
+                    <li>Dr. Praveena Rajput, Dr. Nikita Kashyap, Dr. Ruchi Tripathi</li>
+                    <li>Mrs. Pragati Patharia, Mr. Deepak Rathore</li>
+                    <li>Mr. Jitendra Bhardwaj, Mr. Chandan Tamrakar</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <h3>Publications & Contact Information</h3>
+        <p><strong>Publication Note:</strong> Accepted and presented papers will be considered for possible inclusion in book chapters published by Springer/Elsevier.</p>
+        <p style="margin-top: 20px;"><strong>Contact Email:</strong> <br>
+            <a href="mailto:shrawan.patel@ggu.ac.in">shrawan.patel@ggu.ac.in</a> | 
+            <a href="mailto:anil.soni@ggu.ac.in">anil.soni@ggu.ac.in</a>
+        </p>
+        <p style="margin-top: 30px; font-size: 0.9rem; color: #ccc;">
+            &copy; 2027 S-MATRICS Symposium. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
