@@ -69,7 +69,6 @@
 
         /* Hero Section - Glassmorphism */
         .hero {
-            /* Using a cool dark tech/abstract background to make the glass pop */
             background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed;
             padding: 120px 20px;
             display: flex;
@@ -79,11 +78,11 @@
         }
 
         .hero-glass {
-            background: rgba(255, 255, 255, 0.05); /* Very subtle white tint */
-            backdrop-filter: blur(16px); /* The frosted glass effect */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for the glass edge */
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Depth shadow */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
             border-radius: 20px;
             padding: 60px 40px;
             max-width: 900px;
@@ -117,7 +116,6 @@
         }
 
         .hero-glass .date-location {
-            /* Pill-shaped secondary glass element */
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
@@ -230,6 +228,12 @@
 
         .track-card li {
             margin-bottom: 8px;
+        }
+        
+        .track-card ul ul {
+            list-style-type: circle;
+            padding-left: 20px;
+            margin-top: 5px;
         }
 
         /* Committee */
@@ -378,7 +382,7 @@
                 </tr>
                 <tr>
                     <td>Notification of Acceptance</td>
-                    <td>December 20, 2027</td>
+                    <td>December 20, 2026</td>
                 </tr>
                 <tr>
                     <td>Camera Ready Paper</td>
@@ -405,7 +409,8 @@
                     <h3>Track 1: mmWave Antennas and Antenna Systems</h3>
                     <ul>
                         <li>Millimeter-Wave Antennas</li>
-                        <li>Phased Array and Beamforming Antennas</li>
+                        <li>Phased Array Antennas</li>
+                        <li>Beamforming Antennas</li>
                         <li>MIMO and Massive MIMO Antennas</li>
                         <li>Metasurface and Metamaterial Antennas</li>
                         <li>Reconfigurable and Tunable Antennas</li>
@@ -426,9 +431,21 @@
                     <h3>Track 2: mmWave Circuits and Components</h3>
                     <ul>
                         <li>Millimeter-Wave RF Circuits</li>
-                        <li>RF Passive Components (Power Dividers, Couplers, Filters, Baluns)</li>
-                        <li>Beamforming Networks (Butler and Nolen Matrices)</li>
-                        <li>Low-Noise Amplifiers (LNA) & Power Amplifiers (PA)</li>
+                        <li>RF Passive Components
+                            <ul>
+                                <li>Power Dividers and Combiners</li>
+                                <li>Directional Couplers and Hybrids</li>
+                                <li>Filters and Multiplexers</li>
+                                <li>Baluns and Impedance Transformers</li>
+                            </ul>
+                        </li>
+                        <li>Beamforming Networks
+                            <ul>
+                                <li>Butler and Nolen Matrices</li>
+                            </ul>
+                        </li>
+                        <li>Low-Noise Amplifiers (LNA)</li>
+                        <li>Power Amplifiers (PA)</li>
                         <li>Mixers and Frequency Converters</li>
                         <li>Oscillators and Frequency Synthesizers</li>
                         <li>Phase Shifters and Attenuators</li>
@@ -441,18 +458,24 @@
                 <div class="track-card">
                     <h3>Track 3: Microwave Integrated Circuits</h3>
                     <ul>
-                        <li>RFIC and MMIC Design (CMOS/BiCMOS, GaN/GaAs/SiGe)</li>
+                        <li>RFIC and MMIC Design
+                            <ul>
+                                <li>CMOS/BiCMOS RFICs</li>
+                                <li>GaN/GaAs/SiGe MMICs</li>
+                            </ul>
+                        </li>
                         <li>Monolithic Microwave Circuits</li>
                         <li>System-on-Chip (SoC) and System-in-Package (SiP)</li>
                         <li>Antenna-in-Package (AiP) and Chip-to-Antenna Integration</li>
-                        <li>5G/6G Transceivers and Integrated Beamforming ICs</li>
+                        <li>5G/6G Transceivers</li>
+                        <li>Integrated Beamforming ICs</li>
                         <li>Phased-Array RFICs</li>
                         <li>Automotive Radar ICs</li>
                         <li>Satellite and Space RFIC/MMIC</li>
                         <li>Electronic Warfare and Defense Electronics</li>
                         <li>AI/ML-Assisted RFIC/MMIC Design</li>
                         <li>Advanced Semiconductor Packaging and Heterogeneous Integration</li>
-                        <li>mmWave/THz Integrated Systems</li>
+                        <li>mmWave/THz Integrated Systems and Emerging Applications</li>
                     </ul>
                 </div>
 
@@ -469,29 +492,39 @@
             <div class="committee-group">
                 <h3>Patrons</h3>
                 <ul>
-                    <li><strong>Chief Patron:</strong> Prof. Alok Kumar Chakrawal (Hon'ble Vice Chancellor, GGV Bilaspur)</li>
-                    <li><strong>Patron:</strong> Prof. Ashwini Kumar Dixit (Registrar, GGV Bilaspur)</li>
+                    <li><strong>Chief Patrons:</strong> Prof. Alok Kumar Chakrawal (Hon'ble Vice Chancellor, GGV Bilaspur, CG.)</li>
+                    <li><strong>Patrons:</strong> Prof. Ashwini Kumar Dixit (Registrar, GGV Bilaspur, CG.)</li>
                 </ul>
             </div>
             
             <div class="committee-group">
                 <h3>Chairs & Convenors</h3>
                 <ul>
-                    <li><strong>Convenors:</strong> Prof. M. Chakradhar Rao, Dr. Sudakar Singh Chauhan</li>
-                    <li><strong>General Chairs:</strong> Dr. Shrawan Kumar Patel, Dr. Anil Kumar Soni</li>
-                    <li><strong>TPC Chairs:</strong> Dr. Arani Ali Khan, Dr. Rusan Kumar Barik, Dr. G. Arun Kumar</li>
+                    <li><strong>Convenors:</strong> Prof. M. Chakradhar Rao (Dean, SoS(E&T), GGV Bilaspur CG.), Dr. Sudakar Singh Chauhan (HOD (ECE), GGV Bilaspur CG.)</li>
+                    <li><strong>General Chairs:</strong> Dr. Shrawan Kumar Patel (GGV Bilaspur, CG.), Dr. Anil Kumar Soni (GGV Bilaspur, CG.)</li>
+                    <li><strong>TPC Chairs:</strong> Dr. Arani Ali Khan (IIT Jodhpur, RJ.), Dr. Rusan Kumar Barik (CHRIST Bangaluru, KA.), Dr. G. Arun Kumar (NIT, Warangal, AP.)</li>
                 </ul>
             </div>
 
             <div class="committee-group">
-                <h3>Organizing Committee (GGV Bilaspur)</h3>
+                <h3>Organizing Committee</h3>
                 <ul>
-                    <li>Prof. Soma Das, Prof. Anita Khanna, Prof. Nipun K Mishra</li>
-                    <li>Dr. P. S. Srivastava, Dr. Rajiv Dey, Dr. Dharmendra Kumar</li>
-                    <li>Dr. Manoj Gupta, Dr. Sumit Kumar Gupta, Dr. Bhanu P. S. Dohare</li>
-                    <li>Dr. Praveena Rajput, Dr. Nikita Kashyap, Dr. Ruchi Tripathi</li>
-                    <li>Mrs. Pragati Patharia, Mr. Deepak Rathore</li>
-                    <li>Mr. Jitendra Bhardwaj, Mr. Chandan Tamrakar</li>
+                    <li>Prof. Soma Das (GGV Bilaspur, CG.)</li>
+                    <li>Prof. Anita Khanna (GGV Bilaspur, CG.)</li>
+                    <li>Prof. Nipun K Mishra (GGV Bilaspur, CG.)</li>
+                    <li>Dr. P. S. Srivastava (GGV Bilaspur, CG.)</li>
+                    <li>Dr. Rajiv Dey (GGV Bilaspur, CG.)</li>
+                    <li>Dr. Dharmendra Kumar (GGV Bilaspur, CG.)</li>
+                    <li>Dr. Manoj Gupta (GGV Bilaspur, CG.)</li>
+                    <li>Dr. Sumit Kumar Gupta (GGV, Bilaspur CG.)</li>
+                    <li>Dr. Bhanu P. S. Dohare (GGV Bilaspur, CG.)</li>
+                    <li>Dr. Praveena Rajput (GGV Bilaspur, CG.)</li>
+                    <li>Dr. Nikita Kashyap (GGV Bilaspur, CG.)</li>
+                    <li>Mrs. Pragati Patharia (GGV Bilaspur, CG.)</li>
+                    <li>Mr. Deepak Rathore (GGV Bilaspur, CG.)</li>
+                    <li>Mr. Jitendra Bhardwaj (GGV Bilaspur, CG.)</li>
+                    <li>Mr. Chandan Tamrakar (GGV Bilaspur, CG.)</li>
+                    <li>Dr. Ruchi Tripathi (GGV Bilaspur, CG.)</li>
                 </ul>
             </div>
         </div>
