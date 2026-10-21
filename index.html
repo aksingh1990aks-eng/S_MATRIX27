@@ -11,6 +11,9 @@
             --light-bg: #f4f7f6;
             --text-color: #333;
             --white: #ffffff;
+            --note-bg: #f0f4f8;
+            --note-border: #b8c7d9;
+            --note-text: #4a5568;
         }
         
         * {
@@ -262,6 +265,27 @@
             background-color: #f1f1f1;
         }
 
+        /* Acknowledgment / CMT Note Box */
+        .cmt-acknowledgment-box {
+            max-width: 800px;
+            margin: 25px auto 0 auto;
+            padding: 16px 20px;
+            background-color: #f8fafc;
+            border-left: 4px solid var(--primary-color);
+            border-top: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            border-radius: 0 6px 6px 0;
+            font-size: 1.2rem;
+            color: #475569;
+            line-height: 1.5;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .cmt-acknowledgment-box strong {
+            color: var(--primary-color);
+        }
+
         /* Tracks */
         .tracks-grid {
             display: grid;
@@ -475,6 +499,11 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- Added Microsoft CMT Note -->
+        <div class="cmt-acknowledgment-box">
+            <strong>Note:</strong> The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+        </div>
     </section>
 
     <!-- Tracks Section -->
@@ -615,6 +644,7 @@
     <footer id="contact">
         <h3>Publications & Contact Information</h3>
         <p><strong>Publication Note:</strong> Accepted and presented papers will be considered for possible inclusion in book chapters published by Springer/Elsevier.</p>
+        <p style="margin-top: 10px; font-size: 0.95rem; opacity: 0.9;"><strong>Review System:</strong> Managed via Microsoft Conference Management Toolkit (CMT).</p>
         <p style="margin-top: 20px;"><strong>Contact Email:</strong> <br>
             <a href="mailto:shrawan.patel@ggu.ac.in">shrawan.patel@ggu.ac.in</a> | 
             <a href="mailto:anil.soni@ggu.ac.in">anil.soni@ggu.ac.in</a>
